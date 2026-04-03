@@ -17,11 +17,7 @@ function NavBar() {
       scrollToId: "home",
       isSection: true,
     },
-    {
-      label: "Blog",
-      href: "/blog",
-      isSection: false,
-    },
+
     {
       label: "Projects",
       href: "/",
@@ -33,6 +29,11 @@ function NavBar() {
       href: "/",
       scrollToId: "skills",
       isSection: true,
+    },
+    {
+      label: "Blog",
+      href: "/blog",
+      isSection: false,
     },
     {
       label: "Miniprojects",
@@ -79,7 +80,7 @@ function NavBar() {
         <section
           className={clsx(
             "fixed h-full w-screen lg:hidden bg-black/10 backdrop-blur-sm top-0 right-0 -translate-x-full transition-all",
-            isOpen && "translate-x-0"
+            isOpen && "translate-x-0",
           )}
           onClick={() => setIsOpen(false)}
         >
