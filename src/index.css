@@ -6,7 +6,7 @@
 * {
   font-family: "Ubuntu", sans-serif;
 }
-body{
+body {
   background-color: rgb(1, 22, 22);
 }
 .ubuntu-light {
@@ -57,30 +57,36 @@ body{
   }
 }
 
-.progress-line.html span {
-  width: 80%;
-}
-.progress-line.css span {
-  width: 80%;
-}
-.progress-line.javascript span {
-  width: 60%;
-}
 .progress-line.reactjs span {
-  width: 50%;
+  width: 80%;
 }
 .progress-line.cpp span {
   width: 80%;
 }
 .progress-line.tailwind span {
+  width: 99%;
+}
+.progress-line.redux span {
+  width: 90%;
+}
+.progress-line.expressjs span {
+  width: 95%;
+}
+.progress-line.nodejs span {
+  width: 90%;
+}
+.progress-line.mongodb span {
   width: 80%;
 }
-.progress-line.bootstrap span {
-  width: 80%;
+.progress-line.sql span {
+  width: 50%;
+}
+.progress-line.git span {
+  width: 75%;
 }
 
 .progress-line.English span {
-  width: 60%;
+  width: 80%;
 }
 .progress-line.Hindi span {
   width: 99%;
@@ -103,20 +109,8 @@ body{
   opacity: 0;
 }
 
-.progress-line.html span::after {
-  content: "80%";
-  border-radius: 10px;
-}
-.progress-line.css span::after {
-  content: "80%";
-  border-radius: 10px;
-}
-.progress-line.javascript span::after {
-  content: "60%";
-  border-radius: 10px;
-}
 .progress-line.reactjs span::after {
-  content: "50%";
+  content: "80%";
   border-radius: 10px;
 }
 .progress-line.cpp span::after {
@@ -124,16 +118,36 @@ body{
   border-radius: 10px;
 }
 .progress-line.tailwind span::after {
+  content: "99%";
+  border-radius: 10px;
+}
+.progress-line.redux span::after {
+  content: "90%";
+  border-radius: 10px;
+}
+.progress-line.expressjs span::after {
+  content: "95%";
+  border-radius: 10px;
+}
+.progress-line.nodejs span::after {
+  content: "90%";
+  border-radius: 10px;
+}
+.progress-line.mongodb span::after {
   content: "80%";
   border-radius: 10px;
 }
-.progress-line.bootstrap span::after {
-  content: "80%";
+.progress-line.sql span::after {
+  content: "50%";
+  border-radius: 10px;
+}
+.progress-line.git span::after {
+  content: "75%";
   border-radius: 10px;
 }
 
 .progress-line.English span::after {
-  content: "60%";
+  content: "80%";
   border-radius: 10px;
 }
 .progress-line.Hindi span::after {

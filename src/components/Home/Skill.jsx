@@ -1,23 +1,27 @@
-import React, { useEffect, useState, useRef } from "react";
-import { TfiHtml5 } from "react-icons/tfi";
-import { SiCss3 } from "react-icons/si";
-import { RiJavascriptFill } from "react-icons/ri";
-import { TbBrandReactNative } from "react-icons/tb";
-import { SiCplusplus } from "react-icons/si";
-import { SiTailwindcss } from "react-icons/si";
-import { FaBootstrap } from "react-icons/fa6";
-import { FaTruckPlane } from "react-icons/fa6";
-import { SiEslgaming } from "react-icons/si";
+﻿import { FaTruckPlane } from "react-icons/fa6";
 import { BsPersonWorkspace } from "react-icons/bs";
 import { MdSportsScore } from "react-icons/md";
-import { motion, useScroll } from "framer-motion";
+import { motion } from "framer-motion";
+import {
+  SiReact,
+  SiNodedotjs,
+  SiExpress,
+  SiMongodb,
+  SiRedux,
+  SiTailwindcss,
+  SiCplusplus,
+  SiGit,
+  SiSqlite,
+  SiEslgaming,
+} from "react-icons/si";
 
 function Skill({ id }) {
-  // Litten increase opacity when interact skill section
-
   // Skill Scetion
   return (
-    <div className="container  bg-teal-950 w-full sm:max-w-full overflow-hidden  text-white">
+    <div
+      id={id}
+      className="container  bg-teal-950 w-full sm:max-w-full overflow-hidden  text-white"
+    >
       {/* Skill-wrapper  */}
       <motion.div className="skill-wrapper w-full h-full">
         {/* field-wrpper */}
@@ -32,49 +36,19 @@ function Skill({ id }) {
               <div className="Technical-bars skills">
                 <div className="bar">
                   <div className="info flex gap-2 justify-left items-center">
-                    <TfiHtml5 className="text-orange-600" />
-                    <span>HTML</span>
-                  </div>
-                  <div className="progress-line html">
-                    <span></span>
-                  </div>
-                </div>
-
-                <div className="bar">
-                  <div className="info flex gap-2 justify-left items-center">
-                    <SiCss3 className="text-blue-500" />
-                    <span>CSS</span>
-                  </div>
-                  <div className="progress-line css">
-                    <span></span>
-                  </div>
-                </div>
-
-                <div className="bar">
-                  <div className="info flex gap-2 justify-left items-center">
-                    <RiJavascriptFill className="text-yellow-600" />
-                    <span>JavaScript</span>
-                  </div>
-                  <div className="progress-line javascript">
-                    <span></span>
-                  </div>
-                </div>
-
-                <div className="bar">
-                  <div className="info flex gap-2 justify-left items-center">
-                    <TbBrandReactNative className="text-cyan-600" />
-                    <span>ReactJS</span>
-                  </div>
-                  <div className="progress-line reactjs">
-                    <span></span>
-                  </div>
-                </div>
-                <div className="bar">
-                  <div className="info flex gap-2 justify-left items-center">
                     <SiCplusplus className="text-blue-500" />
                     <span>C++</span>
                   </div>
                   <div className="progress-line cpp">
+                    <span></span>
+                  </div>
+                </div>
+                <div className="bar">
+                  <div className="info flex gap-2 justify-left items-center">
+                    <SiReact className="text-cyan-600" />
+                    <span>ReactJS</span>
+                  </div>
+                  <div className="progress-line reactjs">
                     <span></span>
                   </div>
                 </div>
@@ -89,10 +63,55 @@ function Skill({ id }) {
                 </div>
                 <div className="bar">
                   <div className="info flex gap-2 justify-left items-center">
-                    <FaBootstrap className="text-purple-600" />
-                    <span>Bootstrap</span>
+                    <SiRedux className="text-purple-500" />
+                    <span>Redux</span>
                   </div>
-                  <div className="progress-line bootstrap">
+                  <div className="progress-line redux">
+                    <span></span>
+                  </div>
+                </div>
+                <div className="bar">
+                  <div className="info flex gap-2 justify-left items-center">
+                    <SiExpress className=" text-white" />
+                    <span>Express Js</span>
+                  </div>
+                  <div className="progress-line expressjs">
+                    <span></span>
+                  </div>
+                </div>
+                <div className="bar">
+                  <div className="info flex gap-2 justify-left items-center">
+                    <SiNodedotjs className="text-green-500" />
+                    <span>Node Js</span>
+                  </div>
+                  <div className="progress-line nodejs">
+                    <span></span>
+                  </div>
+                </div>
+                <div className="bar">
+                  <div className="info flex gap-2 justify-left items-center">
+                    <SiMongodb className="text-green-600" />
+                    <span>MongoDB</span>
+                  </div>
+                  <div className="progress-line mongodb">
+                    <span></span>
+                  </div>
+                </div>
+                <div className="bar">
+                  <div className="info flex gap-2 justify-left items-center">
+                    <SiSqlite className="text-blue-400" />
+                    <span>SQL</span>
+                  </div>
+                  <div className="progress-line sql">
+                    <span></span>
+                  </div>
+                </div>
+                <div className="bar">
+                  <div className="info flex gap-2 justify-left items-center">
+                    <SiGit className="text-orange-600" />
+                    <span>Git</span>
+                  </div>
+                  <div className="progress-line git">
                     <span></span>
                   </div>
                 </div>
@@ -193,14 +212,14 @@ function Skill({ id }) {
                   <div>
                     <p>
                       Completed Diploma in C/C++, and Data Stucture from Aptech
-                      Pitampura Rohini Delhi 110085
+                      Pitampura Rohini Delhi 110085.
                     </p>
                   </div>
                   <div>
-                    <p>
-                      Completed Basic Courses in HTML, CSS, and JAVASCRIPT from
-                      LearnTube by careerNinja.
-                    </p>
+                    <p>Full Stack Developer Course from Udemy.</p>
+                  </div>
+                  <div>
+                    <p>Frontend Developer Course from LearnTube.</p>
                   </div>
                 </div>
               </div>

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { IoIosEye } from "react-icons/io";
 
 function ProjectCard({
@@ -9,92 +9,85 @@ function ProjectCard({
   projectDetails,
   imgLink,
   projectLink,
-  i,
+  stack = [],
+  category,
 }) {
   return (
-    <>
-      <div className={`project-wrapper`} key={i}>
+    <article className="group overflow-hidden rounded-2xl border border-teal-800/80 bg-gradient-to-br from-teal-950/90 to-black/80 transition-all duration-300 hover:-translate-y-1 hover:border-cyan-500/70 hover:shadow-xl hover:shadow-cyan-950/40">
+      <div
+        className={`grid items-center gap-6 p-5 sm:p-7 lg:grid-cols-12 lg:gap-10 ${
+          alternate ? "" : ""
+        }`}
+      >
         <div
-          className={`field-wrapper flex ${
-            alternate ? "flex-wrap-reverse" : "flex-wrap"
-          } w-full items-center text-white lg:px-24 py-6`}
+          className={`relative lg:col-span-5 ${
+            alternate ? "lg:order-2" : "lg:order-1"
+          }`}
         >
-          {alternate ? (
-            <>
-              <div className="image-section flex justify-center items-center w-full sm:w-1/2  pt-6 ">
-                <p className="relative border-4 border-teal-300 rounded-md w-40 h-40 sm:w-60 sm:h-60">
-                  <a href={projectLink}>
-                    <img
-                      src={imgLink}
-                      alt={alt}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 top-[45%] left-[55%] rounded-md"
-                    />
-                  </a>
-                </p>
-              </div>
-              <div className="summary-section w-full sm:w-1/2 md:p-10 xl:p-20  ">
-                <p className="font-bold text-4xl px-2 sm:px-2 md:px-0">
-                  {projectNo}
-                </p>
-                <div className="">
-                  <p className="text-3xl flex gap-3 font-bold underline-offset-8 underline decoration-2 px-2 sm:px-2 md:px-0 py-3">
-                    {projectName}
-                    <a
-                      href={projectLink}
-                      className="cursor-pointer flex justify-center items-center text-zinc-700 hover:text-zinc-600"
-                    >
-                      <IoIosEye className="text-md" />
-                    </a>
-                  </p>
-                  <summary className="mx-auto text-justify rounded-md bg-pink/50 px-4 sm:px-0 list-none mt-3 max-w-xl leading-none tracking-tight ">
-                    {projectDetails}
-                  </summary>
-                </div>
-              </div>
-            </>
-          ) : (
-            <>
-              <div
-                className="summary-section w-full sm:w-1/2 md:p-10 xl:p-20 "
-                key={i}
-              >
-                <p className="font-bold text-4xl px-2 sm:px-2 md:px-0 ">
-                  {projectNo}
-                </p>
-                <div className="">
-                  <p className="text-3xl flex gap-3 font-bold underline-offset-8 underline decoration-2 px-2 sm:px-2 md:px-0 py-3">
-                    {projectName}
-                    <a
-                      href={projectLink}
-                      className="cursor-pointer flex justify-center items-center text-zinc-700 hover:text-zinc-60"
-                    >
-                      <IoIosEye className="text-md" />
-                    </a>
-                  </p>
-                  <summary className="mx-auto text-justify rounded-md bg-pink/50 px-4 sm:px-0 list-none mt-3 max-w-xl leading-none tracking-tight">
-                    {projectDetails}
-                  </summary>
-                </div>
-              </div>
-
-              <div className="image-section flex justify-center items-center w-full sm:w-1/2  pt-6">
-                <p className="relative border-4 border-teal-300 rounded-md w-40 h-40 sm:w-60 sm:h-60">
-                  <a href={projectLink}>
-                    <img
-                      src={imgLink}
-                      alt={alt}
-                      className="absolute -translate-x-1/2 -translate-y-1/2 top-[45%] left-[55%] rounded-md"
-                    />
-                  </a>
-                </p>
-              </div>
-            </>
-          )}
+          <div className="absolute -inset-2 rounded-2xl bg-cyan-500/10 blur-xl transition-all duration-300 group-hover:bg-cyan-400/20"></div>
+          <a
+            href={projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="relative flex h-56 items-center justify-center overflow-hidden rounded-2xl border border-teal-600/70 bg-teal-900/30 p-4 sm:h-64"
+          >
+            <img
+              src={imgLink}
+              alt={alt}
+              className="max-h-full max-w-full object-contain transition-transform duration-300 group-hover:scale-105"
+            />
+          </a>
         </div>
-        <hr className="sm:max-w-6xl text-center mx-auto text-teal-400" />
+
+        <div
+          className={`space-y-4 lg:col-span-7 ${
+            alternate ? "lg:order-1" : "lg:order-2"
+          }`}
+        >
+          <div className="flex flex-wrap items-center gap-2">
+            <span className="rounded-full border border-cyan-600/80 bg-cyan-900/40 px-3 py-1 text-xs font-semibold uppercase tracking-wide text-cyan-300">
+              {projectNo}
+            </span>
+            {category ? (
+              <span className="rounded-full border border-teal-700/80 bg-teal-900/40 px-3 py-1 text-xs font-medium text-teal-100">
+                {category}
+              </span>
+            ) : null}
+          </div>
+
+          <h3 className="text-2xl font-bold tracking-tight text-white sm:text-3xl">
+            {projectName}
+          </h3>
+
+          <p className="text-sm leading-7 text-cyan-100/80 sm:text-base">
+            {projectDetails}
+          </p>
+
+          <div className="flex flex-wrap gap-2">
+            {stack.map((item) => (
+              <span
+                key={item}
+                className="rounded-md border border-teal-700/80 bg-teal-900/35 px-2.5 py-1 text-xs font-medium text-cyan-100"
+              >
+                {item}
+              </span>
+            ))}
+          </div>
+
+          <a
+            href={projectLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-flex items-center gap-2 rounded-lg border border-cyan-600/80 bg-cyan-900/30 px-4 py-2 text-sm font-semibold text-cyan-200 transition-all hover:border-cyan-400 hover:bg-cyan-800/40"
+          >
+            View Project
+            <IoIosEye className="text-lg" />
+          </a>
+        </div>
       </div>
-    </>
+    </article>
   );
 }
 
 export default ProjectCard;
+

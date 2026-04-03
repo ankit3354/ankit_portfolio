@@ -1,107 +1,92 @@
-import React from "react";
-import { NavLink, Link } from "react-router-dom";
+﻿import { NavLink, Link } from "react-router-dom";
 import { ImMail4 } from "react-icons/im";
 import { RxGithubLogo } from "react-icons/rx";
 import { FaLinkedin } from "react-icons/fa6";
-import { SiReplit } from "react-icons/si";
-import { TbBrandFiverr } from "react-icons/tb";
-import { SiLeetcode } from "react-icons/si";
-import { SiCodesignal } from "react-icons/si";
+import { SiReplit, SiLeetcode, SiCodesignal } from "react-icons/si";
 
 function Footer() {
   const navLinks = [
     {
       label: "Home",
       href: "/",
-      scrollToId: "home",
     },
     {
-      label: "Currency Convertor",
-      href: "/currencyconverter",
+      label: "Projects",
+      href: "/",
     },
     {
-      label: "Password Generator ",
-      href: "/passwordgenerator",
+      label: "Miniprojects",
+      href: "/miniprojects",
     },
     {
-      label: "Calculator",
-      href: "/calculator",
+      label: "Skills",
+      href: "/",
     },
     {
-      label: "React Cards",
-      href: "/reactcards",
-    },
-    {
-      label: "Api Page",
-      href: "/apipage",
+      label: "Blog",
+      href: "/blog",
     },
   ];
 
-  const SocialMediaList = [
+  const socialMediaList = [
     {
-      href: "https://mail.google.com/mail/u/0/#inbox",
-      icon: (
-        <ImMail4 className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-      ),
+      href: "https://mail.google.com/mail/?view=cm&fs=1&to=ankitvishwakarma3554@gmail.com",
+      label: "Gmail",
+      icon: <ImMail4 className="text-2xl" />,
     },
     {
       href: "https://github.com/ankit3354",
-      icon: (
-        <RxGithubLogo className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-      ),
+      label: "GitHub",
+      icon: <RxGithubLogo className="text-2xl" />,
     },
     {
-      href: "https://www.linkedin.com/in/ankit3354/",
-      icon: (
-        <FaLinkedin className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-      ),
+      href: "https://www.linkedin.com/in/ankit3354",
+      label: "LinkedIn",
+      icon: <FaLinkedin className="text-2xl" />,
     },
     {
       href: "https://replit.com/@AnkitVishwaka21",
-      icon: (
-        <SiReplit className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-      ),
+      label: "Replit",
+      icon: <SiReplit className="text-2xl" />,
     },
     {
-      href: "https://www.fiverr.com/ankit3354?up_rollout=true#!",
-      icon: (
-        <TbBrandFiverr className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-      ),
-    },
-    {
-      href: "https://leetcode.com/problemset/",
-      icon: (
-        <SiLeetcode className="text-cyan-600 hover:text-cyan-300   text-3xl" />
-      ),
+      href: "https://leetcode.com/u/Ankitskrm3354",
+      label: "LeetCode",
+      icon: <SiLeetcode className="text-2xl" />,
     },
   ];
 
   return (
-    <div className="relative flex bg-teal-950 max-w-full flex-col justify-end overflow-hidden">
-      <div className="relative min-w-full  bg-black/50 px-6 pb-8 pt-10 shadow-xl ring-1 ring-gray-900/5 sm:mx-auto  sm:px-10">
-        <div className="mx-auto flex max-w-full flex-col items-center justify-center text-center gap-6">
-          <div>
-            {/* Logo Icon  */}
-            <Link to="/" className="items-center ">
-              <span className="flex justify-center items-center  text-xl gap-2 w-auto sm:font-sans font-bold text-cyan-600 hover:text-cyan-400">
-                <SiCodesignal />
-                <p>Ankit Vishwakarma</p>
+    <footer className="relative mt-14 w-full bg-teal-950 text-white">
+      <div className="mx-auto w-full max-w-full border-t border-teal-800/80 bg-black/45 px-6 py-20 sm:px-10 lg:px-16 xl:px-24">
+        <div className="mx-auto grid min-h-[24rem] max-w-6xl content-between gap-10 lg:grid-cols-3">
+          <div className="space-y-4">
+            <Link to="/" className="inline-flex items-center gap-3">
+              <SiCodesignal className="text-3xl text-cyan-400" />
+              <span className="text-2xl font-bold tracking-wide text-cyan-300">
+                Ankit Vishwakarma
               </span>
             </Link>
+            <p className="max-w-md text-sm leading-7 text-cyan-100/80">
+              Building practical, performant, and modern web experiences with
+              clean UI and strong engineering fundamentals.
+            </p>
           </div>
-          {/* footer Navlinks  */}
+
           <div>
-            <ul className="flex flex-row flex-wrap justify-center gap-2 rounded-lg  px-4 py-2">
-              {navLinks.map((data, i) => (
-                <li key={i}>
+            <h3 className="text-lg font-semibold text-cyan-300">Quick Links</h3>
+            <ul className="mt-4 grid grid-cols-2 gap-y-3">
+              {navLinks.map((data) => (
+                <li key={data.label}>
                   <NavLink
                     to={data.href}
-                    className={({ isActive }) => `
-                    ${
-                      isActive
-                        ? "text-cyan-300 decoration-teal-700 underline underline-offset-8"
-                        : "text-cyan-600"
-                    } font-medium  duration-200 py-1 px-2 hover:text-cyan-300`}
+                    className={({ isActive }) =>
+                      `${
+                        isActive
+                          ? "text-cyan-200 underline underline-offset-4"
+                          : "text-cyan-500"
+                      } text-sm font-medium transition-colors hover:text-cyan-300`
+                    }
                   >
                     {data.label}
                   </NavLink>
@@ -110,26 +95,33 @@ function Footer() {
             </ul>
           </div>
 
-          {/* footer social lists  */}
           <div>
-            <ul className="flex flex-row flex-wrap justify-evenly gap-2 rounded-lg  px-4 py-2">
-              {SocialMediaList.map((data, i) => (
-                <li key={i} className="px-4">
-                  <a href={data.href} className="cursor-pointer">
+            <h3 className="text-lg font-semibold text-cyan-300">Connect</h3>
+            <ul className="mt-4 flex flex-wrap gap-3">
+              {socialMediaList.map((data) => (
+                <li key={data.label}>
+                  <a
+                    href={data.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={data.label}
+                    className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-cyan-800/70 bg-teal-900/35 text-cyan-400 transition-all hover:-translate-y-0.5 hover:border-cyan-500 hover:text-cyan-200"
+                  >
                     {data.icon}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
+        </div>
 
-          <p className="m-2 w-full border bg-white"></p>
-          <span className="flex flex-wrap sm:justify-center font-semibold text-gray-600 font-mono">
-            Ankit Vishwakarma &copy;copyright | All right reserved.
-          </span>
+        <div className="mx-auto mt-14 max-w-6xl border-t border-teal-800/70 pt-5 text-center">
+          <p className="text-xs font-medium uppercase tracking-wide text-cyan-100/60">
+            Copyright 2024 Ankit Vishwakarma. All rights reserved.
+          </p>
         </div>
       </div>
-    </div>
+    </footer>
   );
 }
 

@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import ReactDOM from "react-dom/client";
 import Layout from "./Layout";
 import "./index.css";
@@ -11,6 +11,8 @@ import {
   Projects,
   Skill,
   React_Cards,
+  MiniProjects,
+  Blog,
 } from "./components";
 import {
   Route,
@@ -28,6 +30,8 @@ const router = createBrowserRouter(
       <Route path="/reactcards" element={<React_Cards />} />
       <Route path="/calculator" element={<Calculator />} />
       <Route path="/apipage" element={<ApiPage />} />
+      <Route path="/miniprojects" element={<MiniProjects />} />
+      <Route path="/blog" element={<Blog />} />
     </Route>
   )
 );

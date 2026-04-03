@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import LocomotiveScroll from "locomotive-scroll";
 
 function Arrorr() {
@@ -8,13 +8,13 @@ function Arrorr() {
       _id: "660930da366c0bcfb213f977",
       uId: "4d94501d1f78ac091dbc9b4d",
       uNm: "Adrien Joly",
-      text: "découvert via le club d'écoute musicale de la bibliothèque de montreuil",
+      text: "dÃ©couvert via le club d'Ã©coute musicale de la bibliothÃ¨que de montreuil",
       name: "Bon Voyage Organisation - Yuseef (Trouver le soleil dans chaque jour de pluie) (Official Audio)",
       eId: "/yt/jLHXXXheZiQ",
       ctx: "bk",
       pl: {
         id: 64,
-        name: "🌍 Voyage",
+        name: "ðŸŒ Voyage",
       },
       img: "https://i.ytimg.com/vi/jLHXXXheZiQ/default.jpg",
       src: {
@@ -51,7 +51,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 45,
-        name: "🌚 Still awake at night",
+        name: "ðŸŒš Still awake at night",
       },
       img: "https://i.ytimg.com/vi/9h5jq3Ma3JI/default.jpg",
       src: {
@@ -72,7 +72,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 23,
-        name: "🥺 Paranormal intensity",
+        name: "ðŸ¥º Paranormal intensity",
       },
       img: "https://i.ytimg.com/vi/2aTRAvGkqGg/default.jpg",
       src: {
@@ -93,7 +93,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 8,
-        name: "🧶 Chill out",
+        name: "ðŸ§¶ Chill out",
       },
       img: "https://i.ytimg.com/vi/x-81jnVsCQw/default.jpg",
       src: {
@@ -108,13 +108,13 @@ function Arrorr() {
       _id: "65f9c63c870dcc3307ae418f",
       uId: "4d94501d1f78ac091dbc9b4d",
       uNm: "Adrien Joly",
-      text: "Merci Étienne Guéreau de Piano Jazz Concept pour la découverte",
+      text: "Merci Ã‰tienne GuÃ©reau de Piano Jazz Concept pour la dÃ©couverte",
       name: "The Very Big Experimental Toubifri Orchestra - GRANDE MAIN",
       eId: "/yt/V4pHCT0c4qw",
       ctx: "bk",
       pl: {
         id: 61,
-        name: "🎺 Jazz meets World",
+        name: "ðŸŽº Jazz meets World",
       },
       img: "https://i.ytimg.com/vi/V4pHCT0c4qw/default.jpg",
       src: {
@@ -133,7 +133,7 @@ function Arrorr() {
       eId: "/yt/_LdpNreJj6M",
       pl: {
         id: 31,
-        name: "🌄 Today's the day",
+        name: "ðŸŒ„ Today's the day",
       },
       img: "https://i.ytimg.com/vi/_LdpNreJj6M/default.jpg",
       repost: {
@@ -155,7 +155,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 11,
-        name: "🕶 soul / funk / jazz / etc...",
+        name: "ðŸ•¶ soul / funk / jazz / etc...",
       },
       img: "https://i.ytimg.com/vi/wfr1D7_-5eM/default.jpg",
       src: {
@@ -230,7 +230,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 45,
-        name: "🌚 Still awake at night",
+        name: "ðŸŒš Still awake at night",
       },
       img: "https://i.ytimg.com/vi/3WAO0ACcbNE/default.jpg",
       src: {
@@ -250,7 +250,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 45,
-        name: "🌚 Still awake at night",
+        name: "ðŸŒš Still awake at night",
       },
       img: "https://i.ytimg.com/vi/NKlx9nZRAEs/default.jpg",
       src: {
@@ -270,7 +270,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 12,
-        name: "☁️  Post-rock / progressive",
+        name: "â˜ï¸  Post-rock / progressive",
       },
       img: "https://i.ytimg.com/vi/YeTNkPXRrVY/default.jpg",
       src: {
@@ -291,7 +291,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 12,
-        name: "☁️  Post-rock / progressive",
+        name: "â˜ï¸  Post-rock / progressive",
       },
       img: "https://i.ytimg.com/vi/dFkyrRqzkIQ/default.jpg",
       src: {
@@ -312,7 +312,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 12,
-        name: "☁️  Post-rock / progressive",
+        name: "â˜ï¸  Post-rock / progressive",
       },
       img: "https://i.ytimg.com/vi/1sc9tN_DVX0/default.jpg",
       src: {
@@ -332,7 +332,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 11,
-        name: "🕶 soul / funk / jazz / etc...",
+        name: "ðŸ•¶ soul / funk / jazz / etc...",
       },
       img: "https://i.ytimg.com/vi/kk0WRHV_vt8/default.jpg",
       src: {
@@ -352,7 +352,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 33,
-        name: "🎉 Celebration!",
+        name: "ðŸŽ‰ Celebration!",
       },
       img: "https://i.ytimg.com/vi/A73voVPhMfY/default.jpg",
       src: {
@@ -372,7 +372,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 39,
-        name: "🎟  aLIVE",
+        name: "ðŸŽŸ  aLIVE",
       },
       img: "https://i.ytimg.com/vi/t-E1SaDrHJQ/default.jpg",
       src: {
@@ -392,7 +392,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 53,
-        name: "👨‍💻 epic coding session soundtrack",
+        name: "ðŸ‘¨â€ðŸ’» epic coding session soundtrack",
       },
       img: "https://i.ytimg.com/vi/rITbGRY4zRs/default.jpg",
       src: {
@@ -412,7 +412,7 @@ function Arrorr() {
       ctx: "bk",
       pl: {
         id: 34,
-        name: "👟 Indie rock / Shoegaze",
+        name: "ðŸ‘Ÿ Indie rock / Shoegaze",
       },
       img: "https://i.ytimg.com/vi/_NEDVXPIdms/default.jpg",
       src: {
@@ -448,7 +448,7 @@ function Arrorr() {
                   {song.pl?.name}
                 </p>
                 <p className="px-2 py-2 text-lg font-medium text-white border rounded-xl bg-teal-800 hover:bg-teal-700 focus:bg-teal-700">
-                  <a href={song.src?.id}>Youtube Link</a>
+                  <a href={song.src?.id} target="_blank" rel="noopener noreferrer">Youtube Link</a>
                 </p>
               </div>
             </div>
@@ -460,3 +460,4 @@ function Arrorr() {
 }
 
 export default Arrorr;
+

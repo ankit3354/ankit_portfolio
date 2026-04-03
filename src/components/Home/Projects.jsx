@@ -1,66 +1,74 @@
-import React, { useEffect, useState } from "react";
+﻿import React, { useState } from "react";
 import ProjectCard from "./ProjectCard";
-import { TbArrowBadgeUp } from "react-icons/tb";
-import { TbArrowBadgeDown } from "react-icons/tb";
+import { TbArrowBadgeUp, TbArrowBadgeDown } from "react-icons/tb";
 
-function Projects() {
+function Projects({ id = "projects" }) {
   const [showProject, setShowProject] = useState(false);
-  const [startIndex, setStartIndex] = useState(3); // Initial start index for additional projects
+  const [startIndex] = useState(2);
 
   const projectDetails = [
     {
-      projectName: "Single Page Application",
-      projectNo: "Project 1",
-      projectDetails: `I've showcased my ability to create dynamic, responsive web applications. The portfolio includes a variety of small projects such as a Calculator, API-handling React Cards, a Password Generator, and a Currency Converter. Each project demonstrates my proficiency in React.js, user-friendly UI design, and the seamless integration of external APIs.`,
-      alt: "1Logo",
-      imgLink: "/ProjectImg/SinglePageApp.svg",
-      projectLink: "https://single-page-application-seven.vercel.app/",
+      projectName: "Chat App",
+      projectNo: "Project 2",
+      projectDetails:
+        "A secure real-time messaging experience with user-based access and message control features.",
+      alt: "Chat app preview",
+      imgLink: "/ProjectImg/ChatApp.svg",
+      projectLink: "https://chat-app-ujea.vercel.app",
+      stack: ["React", "Appwrite", "Realtime"],
+      category: "Communication",
+    },
+    {
+      projectName: "Histagram",
+      projectNo: "Project 3",
+      projectDetails:
+        "A social platform clone with authentication, CRUD, profile management, and post interactions like save, like, and delete.",
+      alt: "Histagram preview",
+      imgLink: "/ProjectImg/Histagram.svg",
+      projectLink: "https://github.com/ankit3354/Histagram.git",
+      stack: ["React", "Auth", "CRUD"],
+      category: "Social Media",
     },
     {
       projectName: "Todo List",
-      projectNo: "Project 2",
-      projectDetails: `Todo List application using Appwrite for data storage. It features a seamless toggle function for task management, showcasing my ability to integrate backend services and create interactive, user-friendly interfaces.`,
-      alt: "2Logo",
+      projectNo: "Project 1",
+      projectDetails:
+        "A task manager powered by Appwrite with smooth add, toggle, and delete workflows for daily productivity.",
+      alt: "Todo List preview",
       imgLink: "/ProjectImg/TodoList.svg",
       projectLink: "https://todo-list-vert-omega-47.vercel.app/",
-    },
-    {
-      projectName: "Chat App",
-      projectNo: "Project 3",
-      projectDetails: `Chat app project, users can engage in real-time conversations with authorized individuals, utilizing Appwrite for data storage. The app features seamless message deletion and a secure, efficient communication experience.`,
-      alt: "3Logo",
-      imgLink: "/ProjectImg/ChatApp.svg",
-      projectLink: "https://chat-app-ujea.vercel.app",
-    },
-    {
-      projectName: "Histagram ",
-      projectNo: "Project 4",
-      projectDetails: `Histagram clone is similar to Instagram app where I've implemented a multi-page application with features like CRUD operations, an Explore section, profile management, post interactions (like, delete, save), and user authentication. This project highlights my skills in building comprehensive social media platforms with React and ensuring a smooth, engaging user experience.
-      `,
-      alt: "4Logo",
-      imgLink: "/ProjectImg/Histagram.svg",
-      projectLink: "https://github.com/ankit3354/Histagram.git",
-    },
-    {
-      projectName: "Crypto Dashbord",
-      projectNo: "Project 5",
-      projectDetails: `Crypto Dashboard, Responsive ReactJS application using Chakra UI. It has three pages: Transactions, Dashboard, and Support, providing a comprehensive and user-friendly interface for managing crypto assets.`,
-      alt: "4Logo",
-      imgLink: "/ProjectImg/Dashboard.svg",
-      projectLink: "https://dashboard-pi-dun.vercel.app",
+      stack: ["React", "Appwrite", "Tailwind"],
+      category: "Productivity",
     },
   ];
 
-  return (
-    <main className="container flex flex-col bg-teal-950 pt-16 sm:max-w-full sm:mx-auto ring-gray-900/5 shadow-xl ring-1 transition-all">
-      <div>
-        <p className="text-2xl font-bold text-center text-white/50 uppercase underline underline-offset-4">
-          Projects.
-        </p>
+  const visibleProjects = showProject
+    ? projectDetails
+    : projectDetails.slice(0, startIndex);
 
-        {projectDetails.slice(0, startIndex).map((project, i) => (
-          <div className="flex flex-col" key={i}>
+  return (
+    <main
+      id={id}
+      className="container mx-auto flex w-full max-w-full flex-col bg-teal-950 px-4 py-16 shadow-xl ring-1 ring-gray-900/5 sm:px-8 lg:px-14"
+    >
+      <section className="rounded-2xl border border-teal-800/70 bg-black/40 p-6 sm:p-10">
+        <div className="mx-auto max-w-5xl text-center">
+          <p className="inline-flex rounded-full border border-cyan-700/70 bg-cyan-900/30 px-4 py-1 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-300">
+            Featured Work
+          </p>
+          <h2 className="mt-4 text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Projects That Reflect My Development Journey
+          </h2>
+          <p className="mx-auto mt-3 max-w-3xl text-sm leading-6 text-cyan-100/80 sm:text-base">
+            A curated set of practical products focused on real-world use cases,
+            clean UI decisions, and scalable frontend architecture.
+          </p>
+        </div>
+
+        <div className="mt-10 space-y-7">
+          {visibleProjects.map((project, i) => (
             <ProjectCard
+              key={project.projectName}
               alternate={i % 2 === 0}
               projectName={project.projectName}
               projectNo={project.projectNo}
@@ -68,48 +76,32 @@ function Projects() {
               alt={project.alt}
               imgLink={project.imgLink}
               projectLink={project.projectLink}
-              i={i}
+              stack={project.stack}
+              category={project.category}
             />
-          </div>
-        ))}
-
-        {showProject && (
-          <>
-            {projectDetails.slice(startIndex).map((project, i) => (
-              <div className="flex flex-col" key={i + startIndex}>
-                <ProjectCard
-                  alternate={(i + startIndex) % 2 === 0}
-                  projectName={project.projectName}
-                  projectNo={project.projectNo}
-                  projectDetails={project.projectDetails}
-                  alt={project.alt}
-                  imgLink={project.imgLink}
-                  projectLink={project.projectLink}
-                  i={i + startIndex}
-                />
-              </div>
-            ))}
-          </>
-        )}
-
-        <div className="ReadMore-Btn p-4">
-          <div className="flex items-center justify-center ">
-            <p>
-              {showProject ? (
-                <TbArrowBadgeUp
-                  onClick={() => setShowProject((prev) => !prev)}
-                  className="text-teal-200 text-3xl font-bold cursor-pointer transition-all "
-                />
-              ) : (
-                <TbArrowBadgeDown
-                  onClick={() => setShowProject((prev) => !prev)}
-                  className="text-teal-200 text-3xl font-bold cursor-pointer transition-all "
-                />
-              )}
-            </p>
-          </div>
+          ))}
         </div>
-      </div>
+
+        <div className="mt-8 flex items-center justify-center">
+          <button
+            type="button"
+            onClick={() => setShowProject((prev) => !prev)}
+            className="group inline-flex items-center gap-2 rounded-full border border-cyan-700/60 bg-teal-900/40 px-5 py-2 text-sm font-semibold text-cyan-200 transition-all hover:border-cyan-500 hover:bg-cyan-900/30"
+          >
+            {showProject ? (
+              <>
+                Show Less
+                <TbArrowBadgeUp className="text-xl" />
+              </>
+            ) : (
+              <>
+                Show More
+                <TbArrowBadgeDown className="text-xl" />
+              </>
+            )}
+          </button>
+        </div>
+      </section>
     </main>
   );
 }
