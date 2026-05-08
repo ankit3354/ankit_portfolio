@@ -1,1 +1,3 @@
-I’m a Full Stack MERN Developer with 2+ years of experience building scalable and responsive web applications using React.js, Next.js, Node.js, Express.js, MongoDB, SQL, and TypeScript. I specialize in eCommerce, Healthcare, SaaS platforms, admin dashboards, and custom business solutions with modern UI/UX, clean code, and high-performance architecture.
+Welcome to my portfolio!
+Here you can explore my latest Full Stack MERN projects, web applications, and UI designs built using React.js, Next.js, Node.js, MongoDB, SQL, and modern web technologies.
+
